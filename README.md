@@ -43,6 +43,6 @@ Remaining things:
 - Try replacing SoftwareServo by an interrupt-based lib
 - Have a PCB made for that setup! This is currently not the right time as I may need to add a few things, but I would really love to make one!
 - While the tilt is probably fine with a [-90:+90] range, the ultimate goal would be to have a full 360 degrees continuous rotation! But it raises several problems, as having a fine control on the exact pan position, using a slip ring for powering the platform, and also building the platform itself, with proper motorisation!
-- The camera control and raspberry install will be part of another repo. Currently I simply stream with raspivid and cvlc, and use i2c-tools to send the PT commands. Obviously it would be nice to have something nicer!
+- The camera control and raspberry install will be part of another repo. Currently I simply stream with [raspivid and cvlc](https://gist.github.com/RouquinBlanc/c4924fa9bef5f10377e2), and use i2c-tools to send the PT commands. Obviously it would be nice to have something nicer!
 
 [To be continued]
