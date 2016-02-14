@@ -1,9 +1,13 @@
 # PTTinyController
 Control a PT platform from a Raspberry Pi 2 using an AT-Tiny85, 2 servos and I2C communication
 
-This project is based on the excellent work from aboudou and his excellent [Tiny Laser Turret](https://github.com/aboudou/tinylaserturret) project. But while his goal was to have fun with cats (which is a noble goal), my is to control a camera.
+This project is based on the excellent work from aboudou and his excellent [Tiny Laser Turret](https://github.com/aboudou/tinylaserturret) project. But while his goal is to have fun with cats (which is a noble goal), mine is to remotely control a camera.
 
-Using a NoIR camera attached to a raspberry pi 2, I needed to control the pan and tilt, as well as the infrared lighting, which needs to be powered externally. On a setup with a regular camera camera, you could replace the lighting by a laser... and scare cats!
+Using a Sainsmart NoIR camera attached to a raspberry pi 2, I needed to control the pan and tilt, as well as the infrared lighting, which needs to be powered externally. On a setup with a regular camera, you could replace the lighting by a laser... and scare cats!
+
+You may ask why I don't control the servos directly from the RPi:
+- I tried, but generating a software PWM signal while the CPU is busy with streaming the video is not good enough.
+- Where is the fun? I could have tried to work around the initial PWM problem with some other software options, or use a control board, but this is a good occasion to play with the ATTiny85, as it is a bit challenging!
 
 In order for the raspberry to control the pan/tilt/lighting, I used TinyWireS library to implement an I2C slave interface.
 
