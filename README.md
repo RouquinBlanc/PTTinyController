@@ -11,6 +11,10 @@ As of today, I have already built a small setup, with LEGOs and a small poorly s
 
 ![Current version](imgs/lego_platform.jpg "Current version of my platform")
 
+And here is the ugly monster! You don't want to see the other side :-)
+
+![Soldering hell](imgs/board.jpg "Current dev board")
+
 ## Requirements
 - An ATtiny85 microcontroller, with 8MHz internal clock
 - A BCU-81 transistor or equivalent to drive the optional module (laser, IR lighting)
@@ -33,6 +37,7 @@ Remaining things:
 - Properly documenting everything
 - Checking that every lib used is properly referenced, and probably a thanks page!
 - Try replacing SoftwareServo by an interrupt-based lib
+- Have a PCB made for that setup! This is currently not the right time as I may need to add a few things, but I would really love to make one!
 - While the tilt is probably fine with a [-90:+90] range, the ultimate goal would be to have a full 360 degrees continuous rotation! But it raises several problems, as having a fine control on the exact pan position, using a slip ring for powering the platform, and also building the platform itself, with proper motorisation!
 - The camera control and raspberry install will be part of another repo. Currently I simply stream with raspivid and cvlc, and use i2c-tools to send the PT commands. Obviously it would be nice to have something nicer!
 
